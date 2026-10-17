@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — ONG Solidária</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- CABEÇALHO PRINCIPAL -->
+  <header class="top-header">
+    <div class="container header-container">
+      <div class="brand-wrapper">
+        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=150&q=80" alt="Logo ONG Solidária" class="logo">
+        <div>
+          <span class="brand-title">ONG Solidária</span>
+          <span class="brand-subtitle">Canais de Atendimento</span>
+        </div>
+      </div>
+      <a href="doacoes.html" class="btn btn-gold">
+        <i data-lucide="heart"></i> Fazer Doação
+      </a>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="main-nav">
+    <div class="container">
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Nossos Projetos</a></li>
+        <li><a href="voluntarios.html">Seja Voluntário</a></li>
+        <li><a href="doacoes.html">Apoie/Doações</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+        <li><a href="login.html">Painel Restrito</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SEÇÃO CONTATO -->
+  <header class="hero">
+    <div class="container">
+      <span class="hero-badge"><i data-lucide="message-square"></i> Estamos Prontos para Ouvir Você</span>
+      <h1>Fale com a ONG Solidária</h1>
+      <p>Dúvidas, parcerias institucionais, imprensa ou sugestões? Entre em contato diretamente com nossa equipe técnica e de atendimento.</p>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO DA PÁGINA DE CONTATO -->
+  <section class="content-section container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: start;">
+      
+      <!-- COLUNA DA ESQUERDA: INFOS DE CONTATO -->
+      <div>
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+          <span class="section-subtitle">Canais Oficiais</span>
+          <h2 class="section-title">Informações de Atendimento</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          
+          <div class="metric-card" style="text-align: left; border-top: none; border-left: 4px solid var(--gold); padding: 1.2rem 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <i data-lucide="mail" style="color: var(--gold); width: 28px; height: 28px;"></i>
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">E-mail Geral</span>
+                <strong style="display: block; font-size: 1.05rem; color: var(--primary);">contato@ongsolidaria.org</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="metric-card" style="text-align: left; border-top: none; border-left: 4px solid var(--gold); padding: 1.2rem 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <i data-lucide="phone-call" style="color: var(--gold); width: 28px; height: 28px;"></i>
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Telefone / WhatsApp</span>
+                <strong style="display: block; font-size: 1.05rem; color: var(--primary);">(66) 99999-9999</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="metric-card" style="text-align: left; border-top: none; border-left: 4px solid var(--gold); padding: 1.2rem 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <i data-lucide="map-pin" style="color: var(--gold); width: 28px; height: 28px;"></i>
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Sede Institucional</span>
+                <strong style="display: block; font-size: 1.05rem; color: var(--primary);">São Félix do Araguaia — MT</strong>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Atendimento de Segunda a Sexta, das 08h às 17h</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- COLUNA DA DIREITA: FORMULÁRIO DE MENSAGEM -->
+      <div class="form-card" style="max-width: 100%; margin: 0;">
+        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.5rem;">Envie uma Mensagem</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Preencha os campos abaixo e responderemos o mais breve possível.</p>
+        
+        <form id="form-contato" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! Em breve entraremos em contato.'); this.reset();">
+          <div class="form-group">
+            <label for="nome-contato">Seu Nome:</label>
+            <input type="text" id="nome-contato" class="form-control" placeholder="Ex: Ana Souza" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email-contato">Seu E-mail:</label>
+            <input type="email" id="email-contato" class="form-control" placeholder="seuemail@exemplo.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="assunto">Assunto:</label>
+            <select id="assunto" class="form-control" required>
+              <option value="">Selecione o assunto...</option>
+              <option value="Dúvidas Gerais">Dúvidas Gerais</option>
+              <option value="Parcerias Institucionais">Parcerias Institucionais / Empresas</option>
+              <option value="Voluntariado">Dúvidas sobre Voluntariado</option>
+              <option value="Imprensa">Assessoria de Imprensa</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" class="form-control" rows="4" placeholder="Escreva sua mensagem aqui..." required style="resize: vertical;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">
+            <i data-lucide="send"></i> Enviar Mensagem
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="main

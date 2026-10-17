@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AM Lanches — Sabores Caseiros & Afeto</title>
+    
+    <!-- CSS Local -->
+    <link rel="stylesheet" href="estilo.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Menu de Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">AM Lanches</a>
+            
+            <button class="btn-mobile" id="btn-mobile" aria-label="Abrir Menu">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <div class="menu-links" id="menu-links">
+                <a href="#produtos">Cardápio</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#contato">Contato</a>
+                <a href="#produtos" class="btn-nav-cta">Fazer Pedido</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Principal (Hero) -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="badge-hero">
+                    <i data-lucide="heart" size="16"></i> Feito com carinho e qualidade
+                </span>
+                <h1>AM Lanches</h1>
+                <p>Lanches deliciosos preparados com ingredientes frescos e aquele toque caseiro inesquecível que faz toda a diferença!</p>
+                <div class="hero-btns">
+                    <a href="#produtos" class="btn btn-primary">
+                        <i data-lucide="utensils"></i> Ver Cardápio
+                    </a>
+                    <a href="#contato" class="btn btn-outline">
+                        <i data-lucide="map-pin"></i> Como Chegar
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper">
+                <img src="imagens/Rosca-Hungura.jpg" alt="Rosca Húngara AM Lanches" class="hero-img" onerror="this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80'">
+                <div class="badge-flutuante">
+                    <i data-lucide="sparkles"></i>
+                    <span>Receitas Caseiras</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de Produtos / Cardápio -->
+    <section id="produtos" class="secao-produtos">
+        <div class="container">
+            <div class="cabecalho-secao">
+                <span class="subtitulo-secao">Nossas Delícias</span>
+                <h2 class="titulo-secao">Feitos na Hora para Você</h2>
+            </div>
+
+            <div class="produtos-grid">
+                <!-- Produto 1 -->
+                <div class="produto-card">
+                    <div class="img-box">
+                        <img src="imagens/Rosca-Hungura.jpg" alt="Rosca Húngara" onerror="this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80'">
+                        <span class="tag-categoria">Especialidade</span>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Rosca Húngara</h3>
+                        <p>Massa fofinha artesanal, recheada e coberta com calda cremosa e coco ralado.</p>
+                        <button class="btn-pedir" onclick="pedirLanche('Rosca Húngara')">
+                            <i data-lucide="shopping-bag"></i> Pedir no WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="produto-card">
+                    <div class="img-box">
+                        <img src="imagens/enroladinho-queijo.jpg" alt="Enroladinho de Queijo" onerror="this.src='https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Enroladinho de Queijo</h3>
+                        <p>Massa leve e dourada com recheio generoso de queijo derretido e suculento.</p>
+                        <button class="btn-pedir" onclick="pedirLanche('Enroladinho de Queijo')">
+                            <i data-lucide="shopping-bag"></i> Pedir no WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="produto-card">
+                    <div class="img-box">
+                        <img src="imagens/enroladinho-salsicha.jpg" alt="Enroladinho de Salsicha" onerror="this.src='https://amopaocaseiro.com.br/wp-content/uploads/2022/01/yt-054_enroladinho-de-salsicha_receita.jpg'">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Enroladinho de Salsicha</h3>
+                        <p>Salgado assado macio, perfeitamente temperado para o lanche da tarde.</p>
+                        <button class="btn-pedir" onclick="pedirLanche('Enroladinho de Salsicha')">
+                            <i data-lucide="shopping-bag"></i> Pedir no WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="produto-card">
+                    <div class="img-box">
+                        <img src="imagens/cigarrete.jpg" alt="Cigarrete de Presunto e Queijo" onerror="this.src='https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Cigarrete Especial</h3>
+                        <p>Crocante por fora e mega recheada com presunto e queijo derretido por dentro.</p>
+                        <button class="btn-pedir" onclick="pedirLanche('Cigarrete Especial')">
+                            <i data-lucide="shopping-bag"></i> Pedir no WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="secao-sobre">
+        <div class="container sobre-grid">
+            <div class="sobre-texto">
+                <span class="subtitulo-secao">Nossa História</span>
+                <h2 class="titulo-secao-esquerda">Amor em Forma de Lanche</h2>
+                <p>Meu nome é <strong>Maiza</strong>, tenho 29 anos e sou apaixonada por transformar simples momentos em experiências saborosas.</p>
+                <p>Foi dessa paixão que nasceu a <strong>AM Lanches</strong>, um espaço pensado para oferecer receitas preparadas com carinho, qualidade e aquele toque caseiro que faz toda a diferença.</p>
+                <p class="destaque-sobre">"Mais do que lanches, entregamos aconchego e alegria em cada mordida. Acreditamos que comer bem é celebrar a vida!"</p>
+            </div>
+            <div class="sobre-card-destaque">
+                <i data-lucide="chef-hat" size="48"></i>
+                <h3>Produção Artesanal</h3>
+                <p>Receitas preparadas diariamente em Espigão do Leste - MT com máximo frescor e higiene.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="secao-contato">
+        <div class="container">
+            <div class="contato-box">
+                <div class="contato-detalhes">
+                    <h2>Entre em Contato</h2>
+                    <p>Faça sua encomenda ou tire suas dúvidas diretamente conosco!</p>
+                    
+                    <div class="info-item">
+                        <i data-lucide="phone-call"></i>
+                        <div>
+                            <span>Telefone / WhatsApp</span>
+                            <strong>(66) 9225-7917</strong>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <span>Endereço</span>
+                            <strong>Espigão do Leste - MT</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contato-cta">
+                    <h3>Quer encomendar para seu evento?</h3>
+                    <p>Atendemos encomendas para festas, reuniões e lanches corporativos.</p>
+                    <a href="https://wa.me/556692257917?text=Olá%20Maiza!%20Gostaria%20de%20fazer%20uma%20encomenda" target="_blank" class="btn btn-primary">
+                        <i data-lucide="message-square"></i> Falar com a Maiza
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 AM Lanches — Todos os direitos reservados.</p>
+            <p class="credito">Desenvolvido por <strong>Z&Z Desenvolvimentos</strong></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Local -->
+    <script src="script.js"></script>
+</body>
+</html>

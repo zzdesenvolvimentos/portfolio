@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Apoie / Doações — ONG Solidária</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <header class="top-header">
+    <div class="container header-container">
+      <div class="brand-wrapper">
+        <img src="imagens/logo.jpg" alt="Logo ONG" class="logo" onerror="this.src='https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?auto=format&fit=crop&w=150&q=80'">
+        <div>
+          <span class="brand-title">ONG Solidária</span>
+          <span class="brand-subtitle">Doações & Transparência</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Nossos Projetos</a></li>
+        <li><a href="voluntarios.html">Seja Voluntário</a></li>
+        <li><a href="doacoes.html">Apoie/Doações</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Painel Restrito</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="content-section container">
+    <div class="section-header">
+      <span class="section-subtitle">Sua Ajuda Transforma Vidas</span>
+      <h2 class="section-title">Faça uma Contribuição</h2>
+    </div>
+
+    <div class="form-card">
+      <form id="form-doacao">
+        <div class="form-group">
+          <label for="valor">Valor da Doação (R$):</label>
+          <input type="number" id="valor" name="valor" class="form-control" placeholder="Ex: 50.00" min="5" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+          <label for="metodo">Forma de Pagamento:</label>
+          <select id="metodo" name="metodo" class="form-control" required>
+            <option value="">Selecione o método...</option>
+            <option value="pix">PIX (Aprovação Imediata)</option>
+            <option value="cartao">Cartão de Crédito / Débito</option>
+            <option value="boleto">Boleto Bancário</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">
+          <i data-lucide="heart"></i> Realizar Doação
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-credits">
+      <p>&copy; 2026 ONG Solidária. Desenvolvido por <strong>Z&Z Desenvolvimentos</strong>.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

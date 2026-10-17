@@ -1,0 +1,402 @@
+/* ==========================================================================
+   ONG SOLIDÁRIA - ESTILOS GERAIS & SISTEMA DE DESIGN
+   ========================================================================== */
+
+:root {
+  /* Paleta Principal */
+  --primary: #2C3A2E;         /* Verde Militar Profundo */
+  --primary-hover: #1E281F;
+  --secondary: #8A9A7B;       /* Verde Oliva Suave */
+  --gold: #C5A059;            /* Dourado Nobre */
+  --gold-light: #FAF5EA;      /* Dourado Suave para Fundo */
+  --gold-hover: #B08C45;
+  
+  /* Neutros */
+  --bg-main: #F9FAF8;
+  --bg-card: #FFFFFF;
+  --text-dark: #1F2821;
+  --text-muted: #5B665D;
+  --border-light: #E2E8E3;
+  
+  /* Sombras & Bordas */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 4px 12px rgba(44, 58, 46, 0.05);
+  --shadow-md: 0 10px 25px rgba(44, 58, 46, 0.08);
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* === CABEÇALHO & NAVBAR === */
+header.top-header {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1.2rem 0;
+  border-bottom: 3px solid var(--gold);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-wrapper img.logo {
+  height: 52px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+}
+
+.brand-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+}
+
+nav.main-nav {
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0.8rem 0;
+}
+
+.nav-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+  background-color: var(--gold-light);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* === BOTOES & SELOS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
+}
+
+.btn-gold:hover {
+  background-color: var(--gold-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--gold);
+  color: #fff;
+}
+
+/* === HERO & SEÇÕES === */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #1A241C 100%);
+  color: #fff;
+  padding: 5rem 0 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(197, 160, 89, 0.2);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+section.content-section {
+  padding: 4rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  display: block;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-top: 0.3rem;
+}
+
+/* === METRICAS DE IMPACTO === */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: -2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.metric-card {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: var(--radius-md);
+  border-top: 4px solid var(--gold);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.metric-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+}
+
+.metric-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* === CARDS DE PROJETOS === */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold);
+}
+
+.card-img-wrap {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+}
+
+.card-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: 1.2rem;
+}
+
+/* === FORMULÁRIOS === */
+.form-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  max-width: 550px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-md);
+  border-top: 5px solid var(--primary);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: var(--primary);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  background-color: var(--bg-main);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--gold);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+}
+
+/* === RODAPÉ === */
+footer.main-footer {
+  background-color: var(--primary);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 3rem 0 2rem;
+  border-top: 3px solid var(--gold);
+  margin-top: 4rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-credits {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.footer-credits strong {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
